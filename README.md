@@ -1,23 +1,22 @@
-# ScanEye
 ScanEye is a simple yet powerful malware scanner built with Rust, leveraging YARA rules for comprehensive file analysis and real-time monitoring of filesystem activity.
 
 ## Features
-Real-time scanning: Monitors created and modified files using platform-specific tools:
-Linux: inotify
-macOS: FSEvents
-Windows: ReadDirectoryChanges
-Other platforms: Polling
-Full YARA rule support for flexible and robust malware detection.
-Single scan mode for one-time folder analysis with detailed reporting.
-Parallel scanning using a configurable thread pool for efficiency.
-Multiple reporting formats: log, text, and JSON.
+*Real-time scanning: Monitors created and modified files using platform-specific tools:
+    *Linux: inotify
+    *macOS: FSEvents
+    *Windows: ReadDirectoryChanges
+    *Other platforms: Polling
+*Full YARA rule support for flexible and robust malware detection.
+*Single scan mode for one-time folder analysis with detailed reporting.
+*Parallel scanning using a configurable thread pool for efficiency.
+*Multiple reporting formats: log, text, and JSON.
 
 ## Known Limitations
 While ScanEye is lightweight and non-invasive, its design prioritizes simplicity over advanced functionality. This introduces some limitations:
-    Files locked exclusively by other processes may result in "Permission Denied" errors during scanning.
-    Malicious file creation or execution is not prevented but will be reported.
-    Fileless malware detection is not supported.
-    Links between detected files and their originating processes are unavailable.
+    *Files locked exclusively by other processes may result in "Permission Denied" errors during scanning.
+    *Malicious file creation or execution is not prevented but will be reported.
+    *Fileless malware detection is not supported.
+    *Links between detected files and their originating processes are unavailable.
 
 ## Building
 To build ScanEye, run the following command:
