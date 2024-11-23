@@ -3,10 +3,10 @@ ScanEye is a simple yet powerful malware scanner built with Rust, leveraging YAR
 
 ## Features
 Real-time scanning: Monitors created and modified files using platform-specific tools:
-  Linux: inotify
-  macOS: FSEvents
-  Windows: ReadDirectoryChanges
-  Other platforms: Polling
+Linux: inotify
+macOS: FSEvents
+Windows: ReadDirectoryChanges
+Other platforms: Polling
 Full YARA rule support for flexible and robust malware detection.
 Single scan mode for one-time folder analysis with detailed reporting.
 Parallel scanning using a configurable thread pool for efficiency.
